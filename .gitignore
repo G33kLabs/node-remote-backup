@@ -1,3 +1,4 @@
 backup.sublime-project
 backup.sublime-workspace
 node_modules/
+conf/conf.shared.js
