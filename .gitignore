@@ -4,3 +4,4 @@ node_modules/
 conf/conf.shared.js
 reports/
 npm-debug.log
+libs/.DS_Store

@@ -17,7 +17,6 @@
       , "backbone": "x.x.x"
       , "optimist": "x.x.x"
       , "colors": "x.x.x"
-      , "ftp": "x.x.x"
     }
   , "main": "app/backup"
   , "engines": { "node": ">= 0.6.2" }

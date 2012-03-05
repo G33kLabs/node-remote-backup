@@ -6,7 +6,7 @@ process.chdir(path.normalize(__dirname+'/../')) ;
 __dirname = process.cwd() ;
 
 // -- Load clients config file
-var FTPClient = require('ftp'),
+var FTPClient = require(__dirname+'/libs/ftp'),
 	spawn = require('child_process').spawn,
 	exec = require('child_process').exec,
 	fs = require('fs'),
@@ -69,7 +69,7 @@ var RemoteBackup = Backbone.Model.extend({
 		// -> Scan local dir and start ftp list
 		self.scanLocalDir(function() {
 			self.isInit = true ;
-			self.FTPClient = require('ftp') ;
+			self.FTPClient = FTPClient ;
 			self.connectRemote() ;		
 		}) ;
 
@@ -346,7 +346,7 @@ var RemoteBackup = Backbone.Model.extend({
 		self.remoteCatalog[entry.path] = entry ;
 
 		// -> Look if file exists in local repositary
-		console.log(entry.path) ;
+		//console.log(entry.path) ;
 		var localFile = self.localCatalog[entry.path] ;
 		if ( localFile && entry.type == 'FILE' ) {
 			self.trace(('LocalFile exists >> '+entry.path)) ;
@@ -377,7 +377,7 @@ var RemoteBackup = Backbone.Model.extend({
 		}
 
 		// -> Trace
-		self.trace('List : '+ entry.path + " ["+ entry.mtime + '] > ' + tools.number_format(entry.size/1024, 2)+'ko', 'lcyan');	
+		//self.trace('List : '+ entry.path + " ["+ entry.mtime + '] > ' + tools.number_format(entry.size/1024, 2)+'ko', 'lcyan');	
 
 	},
 
@@ -418,7 +418,7 @@ var RemoteBackup = Backbone.Model.extend({
 
 			// -> Build remote archive
 			if ( self.get('type') == 'ssh' && self.remoteArchive && self.remoteArchive.length ) {
-				console.log(self.remoteArchive) ;
+				//console.log(self.remoteArchive) ;
 				self.downloadArchive() ;
 			}
 
