@@ -8,32 +8,17 @@
     ]
   , "repository":{
         "type": "git"
-      , "url": "https://github.com/LearnBoost/socket.io.git"
+      , "url": "git@github.com:html5place/node-remote-backup.git"
     }
   , "dependencies": {
-        "socket.io-client": "0.8.7"
-      , "socket.io": "0.8.7"
-      , "sechash": "0.x.x"
-      , "bcrypt": "0.x.x"
-      , "connect": "1.8.5"
-      , "connect-redis": "1.x.x"
-      , "express": "2.5.4"
-      , "http-proxy": "x.x.x"
-      , "jqtpl": "1.x.x"
-      , "mime": "1.x.x"
-      , "node-static": "x.x.x"
+      "sechash": "x.x.x"
+      , "bcrypt": "x.x.x"
       , "underscore": "x.x.x"
       , "backbone": "x.x.x"
       , "optimist": "x.x.x"
       , "colors": "x.x.x"
-      , "passport": "x.x.x"
-      , "passport-oauth": "x.x.x"
-      , "openid": "x.x.x"
-      , "cradle": "0.x.x"
-      , "policyfile": "0.x.x"
-      , "redis": "0.x.x"
-      , "gowiththeflow": "x.x.x"
+      , "ftp": "x.x.x"
     }
-  , "main": "server"
+  , "main": "app/backup"
   , "engines": { "node": ">= 0.6.2" }
 }
